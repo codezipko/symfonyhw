@@ -13,8 +13,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class WeatherController extends AbstractController
 {
 
-    private $googleApi;
-
     public function index($day, LoaderService $loaderService): Response
     {
         try {

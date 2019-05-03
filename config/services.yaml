@@ -2,6 +2,7 @@ imports:
     - { resource: services/external_api/google_api.yaml }
     - { resource: services/external_api/yahoo_api.yaml }
     - { resource: services/weather.yaml }
+    - { resource: services/age_calculator.yaml }
 # This file is the entry point to configure your own services.
 # Files in the packages/ subdirectory configure your dependencies.
 
@@ -30,6 +31,10 @@ services:
     App\Controller\WeatherController:
         bind:
             $loaderService: '@app.weather.loader_service'
+
+    App\Controller\AgeCalculatorController:
+        bind:
+            $calculatorManager: '@app.age_calculator.age_calculator_manager'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

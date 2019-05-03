@@ -3,6 +3,6 @@ index:
     controller: App\Controller\WeatherController::index
     defaults: { day: null }
 
-calculator:
+age_calculator:
     path: /calculator
-    controller: App\Controller\CalculatorController::index
+    controller: App\Controller\AgeCalculatorController::index

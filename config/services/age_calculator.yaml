@@ -1,0 +1,15 @@
+parameters:
+
+
+services:
+  app.age_calculator.age_calculator_manager:
+    class: App\AgeCalculator\AgeCalculatorManager
+    arguments:
+      $ageCalculator: '@app.model.age_calculator'
+      $ageType: '@app.age_calculator.age_type'
+
+  app.model.age_calculator:
+    class: App\Model\AgeCalculator
+
+  app.age_calculator.age_type:
+    class: App\AgeCalculator\AgeType
